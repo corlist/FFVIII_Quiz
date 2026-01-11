@@ -72,7 +72,7 @@ const QUESTIONS_HARD = [
     { question: "What music plays when fighting Ultima Weapon?", options: [ "Never Look Back", "Only a Plank Between One and Perdition", "Force Your Way", "Dead End" ], answer: "Only a Plank Between One and Perdition" },
     { question: "What music plays when the fake president Deiling reveals his true nature?", options: [ "Unrest", "Force Your Way", "Starting Up", "The Mission" ], answer: "Starting Up" },
     { question: "Which of these music is missable?", options: [ "Rivals", "Drifting", "Blue Sky", "Junction" ], answer: "Blue Sky" },
-    { question: "Which of these music is was completely re-written?", options: [ "The Landing", "Force Your Way", "Don't Be Afraid", "Dead End" ], answer: "The Landing" },
+    { question: "Which of these music was completely re-written from the older released version?", options: [ "The Landing", "Force Your Way", "Don't Be Afraid", "Dead End" ], answer: "The Landing" },
     { question: "What music plays when fighting Ultimecia's first form?", options: [ "Premonition", "Force Your Way", "The Legendary Beast", "The Extreme" ], answer: "Premonition" },
     { question: "Which of these music is played only once?", options: [ "Roses and Wine", "Unrest", "The Salt Flats", "Tell Me" ], answer: "Trust Me" },
     { question: "How many times will Premonition be played?", options: [ "2", "3", "4", "5" ], answer: "4" },
@@ -80,20 +80,27 @@ const QUESTIONS_HARD = [
     { question: "What music plays when Rinoa attempts to approach Edea to trick her into wearing an Odine bangle?", options: [ "FITHOS LUSEC WECOS VINOSEC", "SUCCESSION OF WITCHES", "A Sacrifice", "Premonition" ], answer: "A Sacrifice" },
 ];
 
-const QUESTION_ARRs = {
-    "easy": QUESTIONS_EASY,
-    "medium": QUESTIONS_MEDIUM,
-    "hard": QUESTIONS_HARD
-};
-
 let optionsAnswers = [];
 let selQuestionBox;
 let selBoxRetry;
 let selBtnConfirm;
 let currentQuestion = 1;
 
+let selAudioCursor;
+let selAudioError;
+let selAudioSalary;
+
+const QUESTION_ARRS_CUR = {
+    "easy": [],
+    "medium": [],
+    "hard": []
+};
+
 function addSelectionListener( node ) {
     node.addEventListener( "click", () => {
+        selAudioCursor.currentTime = 0;
+        selAudioCursor.play();
+
         document.querySelectorAll(".pointer").forEach( pointer => { pointer.className = "pointer opaque" } );
         node.children[0].childNodes[0].classList.remove("opaque");
         const currentOptAns = optionsAnswers.pop();
@@ -103,8 +110,11 @@ function addSelectionListener( node ) {
 }
 
 function fillQuestionDOM( difficulty ) {
-    const questions = QUESTION_ARRs[difficulty];
-    const question = questions[ Math.floor((Math.random() * questions.length)) ];
+    const questions = QUESTION_ARRS_CUR[difficulty];
+    const randomIndex = Math.floor((Math.random() * questions.length));
+    const question = JSON.parse(JSON.stringify(questions[randomIndex]));
+    questions.splice(randomIndex, 1);
+
     if ( question.options.length === 1 ) {
         const optionsFunnyDupe = JSON.parse(JSON.stringify(OPTIONS_FUNNY));
 
@@ -156,6 +166,9 @@ function loadQuestion ( difficulty ) {
 }
 
 function confirmPressed() {
+    selAudioCursor.currentTime = 0;
+    selAudioCursor.play();
+
     selBtnConfirm.classList.add("hidden");
     if ( currentQuestion < 4 ) {
         loadQuestion( "medium" );
@@ -169,14 +182,27 @@ function confirmPressed() {
                 clearInterval(intResults);
                 selQuestionBox.textContent = "Results:";
                 let qnCounter = 1;
+                let hasWrong = false;
                 optionsAnswers.forEach( opAns => {
+                    const correct = opAns[0] === opAns[1];
+
                     selQuestionBox.appendChild(
                         document.createElement("p"))
-                        .textContent = `Question ${qnCounter} - ${opAns[0] === opAns[1] ? "Correct!" : "Wrong!"}`;
+                        .textContent = `Question ${qnCounter} - ${correct ? "Correct!" : "Wrong!"}`;
                     qnCounter++;
-                })
 
-                // selQuestionBox.textContent = resultsText;
+                    if ( !correct ) {
+                        hasWrong = true;
+                    }
+                });
+                
+                if ( hasWrong ) {
+                    selAudioError.currentTime = 0;
+                    selAudioError.play();
+                } else {
+                    selAudioSalary.currentTime = 0;
+                    selAudioSalary.play();
+                }
             }
         }, 150);
     }
@@ -188,9 +214,17 @@ function firstInit() {
     selQuestionBox = document.querySelector("#questionBox");
     selBoxRetry = document.querySelector("#boxRetry");
     selBtnConfirm = document.querySelector(".confirm");
+
+    selAudioCursor = document.getElementById("audioCursor");
+    selAudioError = document.getElementById("audioError");
+    selAudioSalary = document.getElementById("audioSalary");
 }
 
 function initGame() {
+    QUESTION_ARRS_CUR["easy"] = JSON.parse(JSON.stringify(QUESTIONS_EASY));
+    QUESTION_ARRS_CUR["medium"] = JSON.parse(JSON.stringify(QUESTIONS_MEDIUM));
+    QUESTION_ARRS_CUR["hard"] = JSON.parse(JSON.stringify(QUESTIONS_HARD));
+
     optionsAnswers = [];
     currentQuestion = 1;
     elemTable = null;
