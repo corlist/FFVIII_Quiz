@@ -40,44 +40,47 @@ const OPTIONS_FUNNY = [
 ];
 
 const QUESTIONS_EASY = [
-    { question: "What music is played in Balamb Garden?", options: [ "Balamb GARDEN" ], answer: "Balamb GARDEN" },
-    { question: "What music is played in Galbadia Garden?", options: [ "Galbadia GARDEN" ], answer: "Galbadia GARDEN" },
-    { question: "What music is played in Fishermans Horizon?", options: [ "Fisherman's Horizon" ], answer: "Fisherman's Horizon" }
+    { question: "What music is played in Balamb Garden?", options: [ "Balamb GARDEN" ], answer: "Balamb GARDEN", loadMusic: "easy" },
+    { question: "What music is played in Galbadia Garden?", options: [ "Galbadia GARDEN" ], answer: "Galbadia GARDEN", loadMusic: "easy" },
+    { question: "What music is played in Fishermans Horizon?", options: [ "Fisherman's Horizon" ], answer: "Fisherman's Horizon", loadMusic: "easy" },
+    { question: "What music is played in the Lunatic Pandora?", options: [ "Lunatic Pandora" ], answer: "Lunatic Pandora", loadMusic: "easy" },
+    { question: "What music is played during Time Compression?", options: [ "Compression of Time" ], answer: "Compression of Time", loadMusic: "easy" },
 ];
 
 const QUESTIONS_MEDIUM = [
-    { question: "What is the regular battle theme called?", options: [ "Force Your Way", "Never Look Back", "Don't Be Afraid", "Premonition" ], answer: "Don't Be Afraid" },
-    { question: "What music plays in one special section of Winhill?", options: [ "Mods de Chocobo", "ODEKA de Chocobo", "ODEKA ke Chocobo", "Fisherman's Horizon" ], answer: "ODEKA ke Chocobo" },
-    { question: "What is the boss battle theme called?", options: [ "Force Your Way", "Find Your Way", "Don't Be Afraid", "Those Who Fight Further" ], answer: "Force Your Way" },
-    { question: "What is the main Chocobo Theme of Final Fantasy VIII?", options: [ "Mods de Chocobo", "ODEKA de Chocobo", "ODEKA ke Chocobo", "Cinco de Chocobo" ], answer: "Mods de Chocobo" },
-    { question: "What music plays in Chocobo Forests?", options: [ "Mods de Chocobo", "Blue Fields", "Breezy", "Fisherman's Horizon" ], answer: "Mods de Chocobo" },
-    { question: "What can be considered NORG's theme song?", options: [ "Heresy", "Unrest", "A Sacrifice", "Truth" ], answer: "Heresy" },
-    { question: "What music plays during Triple Triad?", options: [ "Shuffle or Boogie", "Man with the Machine Gun", "Junction", "Truth" ], answer: "Shuffle or Boogie" },
-    { question: "What music plays in Deiling City?", options: [ "Galbadia GARDEN", "Martial Law", "Breezy", "Under Her Control" ], answer: "Under Her Control" },
-    { question: "Where does The Successor play?", options: [ "Tears' Point", "Orphanage", "Galbadian Garden Auditorium", "Deiling City" ], answer: "Orphanage" },
-    { question: "What music plays in the Fire Cavern?", options: [ "Junction", "Find Your Way", "Blue Fields", "Intruders" ], answer: "Find Your Way" },
-    { question: "What music plays in Dollet after the withdrawal of Galbadian Troops?", options: [ "Dance With the Balamb-Fish", "The Landing", "Martial Law", "The Salt Flats" ], answer: "Dance With the Balamb-Fish" },
-    { question: "What music plays in the underground walkways of Shumi Village?", options: [ "Julia", "Breezy", "No Music", "Find Your Way" ], answer: "No Music" },
-    { question: "What music plays in the Tomb of the Unknown King?", options: [ "Blue Fields", "Junction", "No Music", "Find Your Way" ], answer: "Find Your Way" },
-    { question: "What music plays after Squall seemingly falls into the sands underneath D-District Prison?", options: [ "Tell Me", "Breezy", "No Music", "Blue Fields" ], answer: "Breezy" },
-    { question: "What music plays in D-District Prison after a general alarm is issued?", options: [ "Jailed", "Never Look Back", "Only a Plank Between One and Perdition", "Unrest" ], answer: "Never Look Back" },
-    { question: "What music plays in the secret back area of the Training Centre?", options: [ "Tell Me", "My Mind", "Fear", "Balamb GARDEN" ], answer: "Tell Me" },
-    { question: "What music plays in the Training Centre?", options: [ "Intruders", "Unrest", "Fear", "Balamb GARDEN" ], answer: "Fear" },
-    { question: "What music plays in the Garden Master Crisis?", options: [ "The Mission", "SeeD", "The Stage is Set", "Only a Plank Between One and Perdition" ], answer: "The Mission" },
-    { question: "What music plays in the MD Level of Balamb Garden?", options: [ "The Mission", "SeeD", "The Stage is Set", "Only a Plank Between One and Perdition" ], answer: "The Stage is Set" },
-    { question: "What music plays in the sewers of Deiling City?", options: [ "Residents", "Intruders", "The Stage is Set", "The Mission" ], answer: "Intruders" },
+    { question: "What is the regular battle theme called?", options: [ "Force Your Way", "Never Look Back", "Don't Be Afraid", "Premonition" ], answer: "Don't Be Afraid", loadMusic: "easy" },
+    { question: "What music plays in one special section of Winhill?", options: [ "Mods de Chocobo", "ODEKA de Chocobo", "ODEKA ke Chocobo", "Fisherman's Horizon" ], answer: "ODEKA ke Chocobo", loadMusic: "easy" },
+    { question: "What is the boss battle theme called?", options: [ "Force Your Way", "Find Your Way", "Don't Be Afraid", "Those Who Fight Further" ], answer: "Force Your Way", loadMusic: "easy" },
+    { question: "What is the main Chocobo Theme of Final Fantasy VIII?", options: [ "Mods de Chocobo", "ODEKA de Chocobo", "ODEKA ke Chocobo", "Cinco de Chocobo" ], answer: "Mods de Chocobo", loadMusic: "easy" },
+    { question: "What music plays in Chocobo Forests?", options: [ "Mods de Chocobo", "Blue Fields", "Breezy", "Fisherman's Horizon" ], answer: "Mods de Chocobo", loadMusic: "easy" },
+    { question: "What can be considered NORG's theme song?", options: [ "Heresy", "Unrest", "A Sacrifice", "Truth" ], answer: "Heresy", loadMusic: "easy" },
+    { question: "What music plays during Triple Triad?", options: [ "Shuffle or Boogie", "Man with the Machine Gun", "Junction", "Truth" ], answer: "Shuffle or Boogie", loadMusic: "easy" },
+    { question: "What music plays in Deiling City?", options: [ "Galbadia GARDEN", "Martial Law", "Breezy", "Under Her Control" ], answer: "Under Her Control", loadMusic: "easy" },
+    { question: "Where does The Successor play?", options: [ "Tears' Point", "Orphanage", "Galbadian Garden Auditorium", "Deiling City" ], answer: "Orphanage", loadMusic: "easy" },
+    { question: "What music plays in the Fire Cavern?", options: [ "Junction", "Find Your Way", "Blue Fields", "Intruders" ], answer: "Find Your Way", loadMusic: "easy" },
+    { question: "What music plays in Dollet after the withdrawal of Galbadian Troops?", options: [ "Dance With the Balamb-Fish", "The Landing", "Martial Law", "The Salt Flats" ], answer: "Dance With the Balamb-Fish", loadMusic: "easy" },
+    { question: "What music plays in the underground walkways of Shumi Village?", options: [ "Julia", "Breezy", "No Music", "Find Your Way" ], answer: "No Music", loadMusic: "easy" },
+    { question: "What music plays in the Tomb of the Unknown King?", options: [ "Blue Fields", "Junction", "No Music", "Find Your Way" ], answer: "Find Your Way", loadMusic: "easy" },
+    { question: "What music plays after Squall seemingly falls into the sands underneath D-District Prison?", options: [ "Tell Me", "Breezy", "No Music", "Blue Fields" ], answer: "Breezy", loadMusic: "easy" },
+    { question: "What music plays in D-District Prison after a general alarm is issued?", options: [ "Jailed", "Never Look Back", "Only a Plank Between One and Perdition", "Unrest" ], answer: "Never Look Back", loadMusic: "easy" },
+    { question: "What music plays in the secret back area of the Training Centre?", options: [ "Tell Me", "My Mind", "Fear", "Balamb GARDEN" ], answer: "Tell Me", loadMusic: "easy" },
+    { question: "What music plays in the Training Centre?", options: [ "Intruders", "Unrest", "Fear", "Balamb GARDEN" ], answer: "Fear", loadMusic: "easy" },
+    { question: "What music plays in the Garden Master Crisis?", options: [ "The Mission", "SeeD", "The Stage is Set", "Only a Plank Between One and Perdition" ], answer: "The Mission", loadMusic: "easy" },
+    { question: "What music plays in the MD Level of Balamb Garden?", options: [ "The Mission", "SeeD", "The Stage is Set", "Only a Plank Between One and Perdition" ], answer: "The Stage is Set", loadMusic: "easy" },
+    { question: "What music plays in the sewers of Deiling City?", options: [ "Residents", "Intruders", "The Stage is Set", "The Mission" ], answer: "Intruders", loadMusic: "easy" },
 ];
 
 const QUESTIONS_HARD = [
-    { question: "What music plays when fighting Ultima Weapon?", options: [ "Never Look Back", "Only a Plank Between One and Perdition", "Force Your Way", "Dead End" ], answer: "Only a Plank Between One and Perdition" },
-    { question: "What music plays when the fake president Deiling reveals his true nature?", options: [ "Unrest", "Force Your Way", "Starting Up", "The Mission" ], answer: "Starting Up" },
-    { question: "Which of these music is missable?", options: [ "Rivals", "Drifting", "Blue Sky", "Junction" ], answer: "Blue Sky" },
-    { question: "Which of these music was completely re-written from the older released version?", options: [ "The Landing", "Force Your Way", "Don't Be Afraid", "Dead End" ], answer: "The Landing" },
-    { question: "What music plays when fighting Ultimecia's first form?", options: [ "Premonition", "Force Your Way", "The Legendary Beast", "The Extreme" ], answer: "Premonition" },
-    { question: "Which of these music is played only once?", options: [ "Roses and Wine", "Unrest", "The Salt Flats", "Tell Me" ], answer: "Trust Me" },
+    { question: "What music plays when fighting Ultima Weapon?", options: [ "Never Look Back", "Only a Plank Between One and Perdition", "Force Your Way", "Dead End" ], answer: "Only a Plank Between One and Perdition", loadMusic: "easy" },
+    { question: "What music plays when the fake president Deiling reveals his true nature?", options: [ "Unrest", "Force Your Way", "Starting Up", "The Mission" ], answer: "Starting Up", loadMusic: "easy" },
+    { question: "Which of these music is missable?", options: [ "Rivals", "Drifting", "Blue Sky", "Junction" ], answer: "Blue Sky", loadMusic: "easy" },
+    { question: "Which of these music was completely re-written from the older released version?", options: [ "The Landing", "Force Your Way", "Don't Be Afraid", "Dead End" ], answer: "The Landing", loadMusic: "easy" },
+    { question: "What music plays when fighting Ultimecia's first form?", options: [ "Premonition", "Force Your Way", "The Legendary Beast", "The Extreme" ], answer: "Premonition", loadMusic: "easy" },
+    { question: "Which of these music is played only once?", options: [ "Roses and Wine", "Unrest", "The Salt Flats", "Tell Me" ], answer: "Trust Me", loadMusic: "easy" },
     { question: "How many times will Premonition be played?", options: [ "2", "3", "4", "5" ], answer: "4" },
-    { question: "What music plays when the Missile Base team appears to be stuck and doomed in the base?", options: [ "My Mind", "Trust Me", "Drifting", "Unrest" ], answer: "Trust Me" },
-    { question: "What music plays when Rinoa attempts to approach Edea to trick her into wearing an Odine bangle?", options: [ "FITHOS LUSEC WECOS VINOSEC", "SUCCESSION OF WITCHES", "A Sacrifice", "Premonition" ], answer: "A Sacrifice" },
+    { question: "What music plays when the Missile Base team appears to be stuck and doomed in the base?", options: [ "My Mind", "Trust Me", "Drifting", "Unrest" ], answer: "Trust Me", loadMusic: "easy" },
+    { question: "What music plays when Rinoa attempts to approach Edea to trick her into wearing an Odine bangle?", options: [ "FITHOS LUSEC WECOS VINOSEC", "SUCCESSION OF WITCHES", "A Sacrifice", "Premonition" ], answer: "A Sacrifice", loadMusic: "easy" },
+    { question: "What is this music?", options: [ "Ami", "Where I Belong", "Trust Me", "Balamb GARDEN" ], answer: "Ami", loadMusic: "hard", loadAnswer: true },
 ];
 
 let optionsAnswers = [];
@@ -90,13 +93,17 @@ let selAudioCursor;
 let selAudioError;
 let selAudioSalary;
 
+let selBody;
+
 const QUESTION_ARRS_CUR = {
     "easy": [],
     "medium": [],
     "hard": []
 };
 
-function addSelectionListener( node ) {
+let lastSelectedMusic = "";
+
+function addSelectionListener( node, option ) {
     node.addEventListener( "click", () => {
         selAudioCursor.currentTime = 0;
         selAudioCursor.play();
@@ -106,7 +113,50 @@ function addSelectionListener( node ) {
         const currentOptAns = optionsAnswers.pop();
         currentOptAns[0] = node.textContent;
         optionsAnswers.push(currentOptAns);
+
+        if ( lastSelectedMusic !== option && lastSelectedMusic.length > 0 ) {
+            console.log( "pausing", lastSelectedMusic );
+            document.getElementById( `${lastSelectedMusic}` ).pause();
+        }
+
+        const newMusic = document.getElementById( `${option}` );
+        if ( newMusic ) {
+            newMusic.currentTime = 0;
+            newMusic.play();
+            lastSelectedMusic = option;   
+        }
     });
+}
+
+function loadMusic( question ) {    
+    if ( question.loadMusic ) {
+        if ( question.loadAnswer ) {
+            const elemMusic = document.createElement("audio");
+            elemMusic.loop = true;
+            elemMusic.autoplay = true;
+            elemMusic.preload = "auto";
+
+            const elemSource = document.createElement("source");
+            elemSource.src = `ost/${question.answer} (${question.loadMusic}).mp3`;
+            elemSource.type = "audio/mpeg";
+            elemMusic.appendChild(elemSource);
+            
+            selDivMusic.appendChild(elemMusic);
+        } else {
+            question.options.forEach( option => {
+                const elemMusic = document.createElement("audio");
+                elemMusic.id = option;
+                elemMusic.loop = true;
+
+                const elemSource = document.createElement("source");
+                elemSource.src = `ost/${option} (${question.loadMusic}).mp3`;
+                elemSource.type = "audio/mpeg";
+                elemMusic.appendChild(elemSource);
+                
+                selDivMusic.appendChild(elemMusic);
+            });
+        }
+    }
 }
 
 function fillQuestionDOM( difficulty ) {
@@ -114,6 +164,8 @@ function fillQuestionDOM( difficulty ) {
     const randomIndex = Math.floor((Math.random() * questions.length));
     const question = JSON.parse(JSON.stringify(questions[randomIndex]));
     questions.splice(randomIndex, 1);
+
+    loadMusic( question );
 
     if ( question.options.length === 1 ) {
         const optionsFunnyDupe = JSON.parse(JSON.stringify(OPTIONS_FUNNY));
@@ -148,7 +200,7 @@ function fillQuestionDOM( difficulty ) {
                 elemPointer.className = `pointer${i === 0 ? '' : ' opaque' }`
                 elemPointer.src = "images/pointer_transparent.gif";
                 elemTdOption.textContent = `${optionsCopy[randIndex]}`;
-                addSelectionListener(elemTr);
+                addSelectionListener(elemTr, optionsCopy[randIndex]);
 
                 if ( i === 0 ) {
                     optionsAnswers.push( [optionsCopy[randIndex], question.answer] );
@@ -166,6 +218,8 @@ function loadQuestion ( difficulty ) {
 }
 
 function confirmPressed() {
+    selDivMusic.innerHTML = "";
+    lastSelectedMusic = "";
     selAudioCursor.currentTime = 0;
     selAudioCursor.play();
 
@@ -215,9 +269,13 @@ function firstInit() {
     selBoxRetry = document.querySelector("#boxRetry");
     selBtnConfirm = document.querySelector(".confirm");
 
+    selDivMusic = document.querySelector("#divMusic");
+
     selAudioCursor = document.getElementById("audioCursor");
     selAudioError = document.getElementById("audioError");
     selAudioSalary = document.getElementById("audioSalary");
+
+    selBody = document.getElementById( "elemBody" );
 }
 
 function initGame() {
@@ -231,6 +289,8 @@ function initGame() {
     selBtnConfirm.classList.remove("hidden");
     selBoxRetry.classList.add("hidden");
     loadQuestion("easy");
+
+    firstInit();
 }
 
 addEventListener("DOMContentLoaded", (/* event */) => {
