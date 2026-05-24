@@ -45,6 +45,8 @@ const OPTIONS_FUNNY = [
     Balamb GARDEN
     Galbadia GARDEN
     ODEKA de Chocobo
+    FITHOS LUSEC WECOS VINOSEC
+    SUCCESSION OF WITCHES
 
     Also don't put (Featuring N's Telecaster) after Mods De Chocobo
 */
