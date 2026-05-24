@@ -1,4 +1,6 @@
 const OPTIONS_FUNNY = [
+    "One-Winged Angel",
+    "To Zanarkand",
     "I Want It That Way",
     "Let It Go",
     "Into the Unknown",
@@ -15,8 +17,6 @@ const OPTIONS_FUNNY = [
     "The Bare Necessities",
     "Beauty and the Beast",
     "Humpty Dumpty",
-    "One Winged Angel",
-    "To Zanarkand",
     "Another One Bites the Dust",
     "Billie Jean",
     "Baby One More Time",
@@ -54,22 +54,27 @@ const QUESTIONS_EASY = [
     { question: "What music is played in Fishermans Horizon?", options: [ "Fisherman's Horizon" ], answer: "Fisherman's Horizon", loadMusic: "easy" },
     { question: "What music is played in the Lunatic Pandora?", options: [ "Lunatic Pandora" ], answer: "Lunatic Pandora", loadMusic: "easy" },
     { question: "What music is played during Time Compression?", options: [ "Compression Of Time" ], answer: "Compression Of Time", loadMusic: "easy" },
+    { question: "Which is the only track with vocals in Final Fantasy VIII?", options: [ "Eyes On Me" ], answer: "Eyes On Me", loadMusic: "easy" },
+    { question: "What music is played in Ultimecia's Castle?", options: [ "The Castle" ], answer: "The Castle", loadMusic: "easy" },
 ];
 
 // Remember that song names are CASE SENSITIVE on the server!
 const QUESTIONS_MEDIUM = [
+
+    // CATEGORY: Battles
     { question: "What is the regular battle theme called?",
 		options: [ "Force Your Way", "Never Look Back", "Don't Be Afraid", "Premonition" ],
 		answer: "Don't Be Afraid", loadMusic: "easy" },
-
-    { question: "What music plays in one special section of Winhill?",
-		options: [ "Mods De Chocobo", "ODEKA de Chocobo", "ODEKA ke Chocobo", "Fisherman's Horizon" ],
-		answer: "ODEKA ke Chocobo", loadMusic: "easy" },
 
     { question: "What is the boss battle theme called?",
 		options: [ "Force Your Way", "Find Your Way", "Don't Be Afraid", "Those Who Fight Further" ],
 		answer: "Force Your Way", loadMusic: "easy" },
 
+    { question: "What is the Laguna's battle theme called?",
+		options: [ "Force Your Way", "The Man With The Machine Gun", "Don't Be Afraid", "Those Who Fight" ],
+		answer: "The Man With The Machine Gun", loadMusic: "easy" },
+
+    // CATEGORY: Character and other themes
     { question: "What is the main Chocobo Theme of Final Fantasy VIII?",
 		options: [ "Mods De Chocobo", "ODEKA de Chocobo", "ODEKA ke Chocobo", "Cinco de Chocobo" ],
 		answer: "Mods De Chocobo", loadMusic: "easy" },
@@ -86,17 +91,30 @@ const QUESTIONS_MEDIUM = [
 		options: [ "Shuffle Or Boogie", "The Man With The Machine Gun", "Junction", "Truth" ],
 		answer: "Shuffle Or Boogie", loadMusic: "easy" },
 
+    // CATEGORY: Cities and towns
+    { question: "What music plays in Balamb town?",
+		options: [ "Breezy", "Balamb GARDEN", "Fisherman's Horizon", "Martial Law" ],
+		answer: "Breezy", loadMusic: "easy" },
+
     { question: "What music plays in Deiling City?",
 		options: [ "Galbadia GARDEN", "Martial Law", "Breezy", "Under Her Control" ],
 		answer: "Under Her Control", loadMusic: "easy" },
 
-    { question: "Where does The Successor play?",
-		options: [ "Tears' Point", "Orphanage", "Galbadian Garden Auditorium", "Deiling City" ],
-		answer: "Orphanage" },
+    { question: "What music plays in Timber?",
+		options: [ "Galbadia GARDEN", "Martial Law", "Breezy", "Under Her Control" ],
+		answer: "Martial Law", loadMusic: "easy" },
 
-    { question: "What music plays in the Fire Cavern?",
-		options: [ "Junction", "Find Your Way", "Blue Fields", "Intruders" ],
-		answer: "Find Your Way", loadMusic: "easy" },
+    { question: "What music plays in Winhill in the present?",
+		options: [ "Fragments Of Memories", "Fisherman's Horizon", "Breezy", "Under Her Control" ],
+		answer: "Fisherman's Horizon", loadMusic: "easy" },
+
+    { question: "What music plays in Winhill in the past?",
+		options: [ "Fragments Of Memories", "Fisherman's Horizon", "Breezy", "Under Her Control" ],
+		answer: "Fragments Of Memories", loadMusic: "easy" },
+
+    { question: "What music plays in the chocobo crossing section of Winhill?",
+		options: [ "Mods De Chocobo", "ODEKA de Chocobo", "ODEKA ke Chocobo", "Fisherman's Horizon" ],
+		answer: "ODEKA ke Chocobo", loadMusic: "easy" },
 
     { question: "What music plays in Dollet after the withdrawal of Galbadian Troops?",
 		options: [ "Dance With The Balamb-Fish", "The Landing", "Martial Law", "The Salt Flats" ],
@@ -106,29 +124,40 @@ const QUESTIONS_MEDIUM = [
 		options: [ "Julia", "Breezy", "No Music", "Find Your Way" ],
 		answer: "No Music", loadMusic: "easy" },
 
+    // CATEGORY: Special areas
+    { question: "Where does The Successor play?",
+		options: [ "Tears' Point", "Orphanage", "Galbadian Garden Auditorium", "Deiling City" ],
+		answer: "Orphanage" },
+
+    { question: "What music plays inside the Galbadia missile base?",
+		options: [ "The Spy", "Intruders", "Rivals", "Jailed" ],
+		answer: "Intruders", loadMusic: "easy" },
+
+    // CATEGORY: Events
+    { question: "What music plays in the secret back area of the Training Centre?",
+		options: [ "Tell Me", "My Mind", "Fear", "Balamb GARDEN" ],
+		answer: "Tell Me", loadMusic: "easy" },
+
+    { question: "What music plays in the Garden Master Crisis?",
+		options: [ "The Mission", "SeeD", "The Stage Is Set", "Only A Plank Between One And Perdition" ],
+		answer: "The Mission", loadMusic: "easy" },
+
+    // CATEGORY: Dungeons
+    { question: "What music plays in the Fire Cavern?",
+		options: [ "Junction", "Find Your Way", "Blue Fields", "Intruders" ],
+		answer: "Find Your Way", loadMusic: "easy" },
+
     { question: "What music plays in the Tomb of the Unknown King?",
 		options: [ "Blue Fields", "Junction", "No Music", "Find Your Way" ],
 		answer: "Find Your Way", loadMusic: "easy" },
-
-    { question: "What music plays after Squall seemingly falls into the sands underneath D-District Prison?",
-		options: [ "Tell Me", "Breezy", "No Music", "Blue Fields" ],
-		answer: "Breezy", loadMusic: "easy" },
 
     { question: "What music plays in D-District Prison after a general alarm is issued?",
 		options: [ "Jailed", "Never Look Back", "Only A Plank Between One And Perdition", "Unrest" ],
 		answer: "Never Look Back", loadMusic: "easy" },
 
-    { question: "What music plays in the secret back area of the Training Centre?",
-		options: [ "Tell Me", "My Mind", "Fear", "Balamb GARDEN" ],
-		answer: "Tell Me", loadMusic: "easy" },
-
     { question: "What music plays in the Training Centre?",
 		options: [ "Intruders", "Unrest", "Fear", "Balamb GARDEN" ],
 		answer: "Fear", loadMusic: "easy" },
-
-    { question: "What music plays in the Garden Master Crisis?",
-		options: [ "The Mission", "SeeD", "The Stage Is Set", "Only A Plank Between One And Perdition" ],
-		answer: "The Mission", loadMusic: "easy" },
 
     { question: "What music plays in the MD Level of Balamb Garden?",
 		options: [ "The Mission", "SeeD", "The Stage Is Set", "Only A Plank Between One And Perdition" ],
@@ -138,6 +167,26 @@ const QUESTIONS_MEDIUM = [
 		options: [ "Residents", "Intruders", "The Stage Is Set", "The Mission" ],
 		answer: "Intruders", loadMusic: "easy" },
 
+    // CATEGORY: Specific instances
+    { question: "What music plays after Squall seemingly falls into the sands underneath D-District Prison?",
+		options: [ "Tell Me", "Breezy", "No Music", "Blue Fields" ],
+		answer: "Breezy", loadMusic: "easy" },
+
+    { question: "What music plays during the black and white reels outside of the game itself?",
+		options: [ "Liberi Fatali", "Overture", "The Oath", "The Loser" ],
+		answer: "Overture", loadMusic: "easy" },
+
+    { question: "What music plays when first meeting Rinoa in the train in her room?",
+		options: [ "Love Grows", "Tell Me", "My Mind", "Eyes On Me" ],
+		answer: "My Mind", loadMusic: "easy" },
+
+    { question: "What music plays when the Balamb Garden transforms and starts flying for the first time?",
+		options: [ "Movin'", "Retaliation", "The Stage Is Set", "Blue Fields" ],
+		answer: "Movin'", loadMusic: "easy" },
+
+    { question: "What music plays when Squall is stabbed by icicles launched by Edea?",
+		options: [ "Premonition", "Wounded", "Rivals", "The Loser" ],
+		answer: "Movin'", loadMusic: "easy" },
 ];
 
 // Remember that song names are CASE SENSITIVE on the server!
@@ -168,7 +217,7 @@ const QUESTIONS_HARD = [
 
     { question: "How many times will Premonition be played?",
 		options: [ "2", "3", "4", "5" ],
-		answer: "4" },
+		answer: "4", playMusic: "Premonition (easy)" },
 
     { question: "What music plays when the Missile Base team appears to be stuck and doomed in the base?",
 		options: [ "My Mind", "Trust Me", "Drifting", "Unrest" ],
@@ -180,7 +229,11 @@ const QUESTIONS_HARD = [
 
     { question: "What is this music?",
 		options: [ "Ami", "Where I Belong", "Trust Me", "Balamb GARDEN" ],
-		answer: "Ami", loadMusic: "hard", loadAnswer: true },
+		answer: "Ami", loadMusic: "hard", playMusic: "Ami (hard)" },
+
+    { question: "What is the final last boss theme?",
+		options: [ "The Legendary Beast", "Maybe I'm A Lion", "Premonition", "The Extreme" ],
+		answer: "The Extreme", loadMusic: "easy" },
 
 ];
 
@@ -229,34 +282,33 @@ function addSelectionListener( node, option ) {
     });
 }
 
-function loadMusic( question ) {    
-    if ( question.loadMusic ) {
-        if ( question.loadAnswer ) {
-            const elemMusic = document.createElement("audio");
-            elemMusic.loop = true;
-            elemMusic.autoplay = true;
-            elemMusic.preload = "auto";
+function loadMusic( question ) {
+    if ( question.playMusic ) {
+      const elemMusic = document.createElement("audio");
+      elemMusic.loop = true;
+      elemMusic.autoplay = true;
+      elemMusic.preload = "auto";
 
-            const elemSource = document.createElement("source");
-            elemSource.src = `ost/${question.answer} (${question.loadMusic}).mp3`;
-            elemSource.type = "audio/mpeg";
-            elemMusic.appendChild(elemSource);
-            
-            selDivMusic.appendChild(elemMusic);
-        } else {
-            question.options.forEach( option => {
-                const elemMusic = document.createElement("audio");
-                elemMusic.id = option;
-                elemMusic.loop = true;
+      const elemSource = document.createElement("source");
+      elemSource.src = `ost/${question.playMusic}.mp3`;
+      elemSource.type = "audio/mpeg";
+      elemMusic.appendChild(elemSource);
+      
+      selDivMusic.appendChild(elemMusic);
 
-                const elemSource = document.createElement("source");
-                elemSource.src = `ost/${option === "ODEKA de Chocobo" ? "ODEKA ke Chocobo" : option} (${question.loadMusic}).mp3`;
-                elemSource.type = "audio/mpeg";
-                elemMusic.appendChild(elemSource);
-                
-                selDivMusic.appendChild(elemMusic);
-            });
-        }
+    } else if ( question.loadMusic ) {
+      question.options.forEach( option => {
+          const elemMusic = document.createElement("audio");
+          elemMusic.id = option;
+          elemMusic.loop = true;
+
+          const elemSource = document.createElement("source");
+          elemSource.src = `ost/${option === "ODEKA de Chocobo" ? "ODEKA ke Chocobo" : option} (${question.loadMusic}).mp3`;
+          elemSource.type = "audio/mpeg";
+          elemMusic.appendChild(elemSource);
+          
+          selDivMusic.appendChild(elemMusic);
+      });
     }
 }
 
@@ -266,17 +318,18 @@ function fillQuestionDOM( difficulty ) {
     const question = JSON.parse(JSON.stringify(questions[randomIndex]));
     questions.splice(randomIndex, 1);
 
-    loadMusic( question );
-
-    if ( question.options.length === 1 ) {
+    if ( question.options.length < 4 ) {
         const optionsFunnyDupe = JSON.parse(JSON.stringify(OPTIONS_FUNNY));
+        const initOptionsLength = question.options.length;
 
-        for ( let i = 0; i < 3; i++ ) {
+        for ( let i = 0; i < (4 - initOptionsLength); i++ ) {
             const randIndex = Math.floor( (Math.random() * optionsFunnyDupe.length) );
             question.options.push( optionsFunnyDupe[randIndex] );
             optionsFunnyDupe.splice(randIndex, 1);
         }
     }
+
+    loadMusic( question );
 
     selQuestionBox.replaceChildren();
     const intQnDom = setInterval( () => {
