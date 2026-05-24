@@ -188,7 +188,7 @@ const QUESTIONS_MEDIUM = [
 
     { question: "What music plays when Squall is stabbed by icicles launched by Edea?",
 		options: [ "Premonition", "Wounded", "Rivals", "The Loser" ],
-		answer: "Movin'", loadMusic: "easy" },
+		answer: "Wounded'", loadMusic: "easy" },
 ];
 
 // Remember that song names are CASE SENSITIVE on the server!
@@ -215,7 +215,7 @@ const QUESTIONS_HARD = [
 
     { question: "Which of these music is played only once?",
 		options: [ "Roses And Wine", "Unrest", "The Salt Flats", "Tell Me" ],
-		answer: "Trust Me", loadMusic: "easy" },
+		answer: "Tell Me", loadMusic: "easy" },
 
     { question: "How many times will Premonition be played?",
 		options: [ "2", "3", "4", "5" ],
